@@ -1,0 +1,56 @@
+<ion-view view-title="Pais" id="Pais">
+  <ion-content>
+
+    <div class="row">
+      <div class="col col-100">
+        <h3>Metodo 1:</h3>
+        <div class="list">
+          <label class="item item-input item-select">
+            <div class="input-label"> Seleccionar Pais </div>
+            <select ng-model="pais" ng-options="pais.nombre for pais in paises">
+              <option value="">Escoge</option>
+              <!--<option ng-repeat="pais in paises">{{ pais.nombre }}</option>-->
+            </select>
+          </label>
+
+          <div class="card">
+            <ion-item>
+              <div class="infoLeft">
+                <h2>{{pais.nombre}}</h2>
+                <p>{{pais.capital}}</p>
+                <p>{{pais.demonym}}</p>
+                <p>{{pais.subregion}}</p>
+              </div>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-100">
+        <h3>Metodo 2:</h3>
+        <div class="list">
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="ingrese pais" ng-model="nombre">
+            </label>
+          </div>
+
+          <button class="button button-block button-assertive" ng-click="buscarPais(nombre)"> Buscar</button>
+
+          <div class="card">
+            <ion-item>
+              <div class="infoLeft">
+                <h2>{{paisEncontrado.nombre}}</h2>
+                <p>{{paisEncontrado.capital}}</p>
+                <p>{{paisEncontrado.demonym}}</p>
+                <p>{{paisEncontrado.subregion}}</p>
+              </div>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

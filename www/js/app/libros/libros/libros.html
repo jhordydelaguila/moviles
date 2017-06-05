@@ -1,0 +1,15 @@
+<ion-view view-title="Libros" id="libro">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-thumbnail-left"  ng-repeat="libro in libros" ng-click="getDetalleLibro(libro)">
+                
+                <div class="info">
+                    <H2>{{libro.title}}</H2>
+                    <p>{{libro.body}}  </p>
+                </div>
+
+                <p class="rating">User id: {{libro.userId}} </p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

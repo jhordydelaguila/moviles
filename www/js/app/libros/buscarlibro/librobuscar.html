@@ -1,0 +1,28 @@
+<ion-view view-title="Libros" id="libro">
+    <ion-content>
+
+<div class="list">
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="ingrese codigo del libro" ng-model="id" style="width :100%">
+    </label>
+    <button class="button button-small" ng-click="buscarLibro(id)">
+      Buscar
+    </button>
+  </div>
+   <div class="card">
+        <ion-item>
+            <div class="infoLeft">
+                <h2>{{libroEncontrado.title}}</h2>
+                <p>{{libroEncontrado.body}}</p>
+                <p>{{libroEncontrado.userId}}</p>
+            </div>          
+        </ion-item>
+
+     
+    </div>
+
+</div>
+  </ion-content>
+</ion-view>
