@@ -53,21 +53,51 @@ angular.module('librosmodule', ['entidadmodulo', 'jsonbookmodulo'])
         }
       })
 
+      .state('app.countries3', {
+        url: '/countries3',
+        views: {
+          'content': {
+            templateUrl: 'js/app/practica/3/countries3.html',
+            controller: 'Countries3Controller',
+            resolve: {
+              countries3: function (libroservicio) {
+                return libroservicio.obtenerCountries3();
+              }
+            }
+          }
+        }
+      })
 
-  })
-/*.state('app.librodetalle', {
+      .state('app.countries4', {
+        url: '/countries4',
+        views: {
+          'content': {
+            templateUrl: 'js/app/practica/4/countries4.html',
+            controller: 'Countries4Controller'
+          }
+        }
+      })
 
- templateUrl: 'js/app/libros/librodetalle/librodetalle.html',
- controller: 'LibroDetalleCtrl'
- url: '/librodetalle/:id',
- views: {
- 'content': {
- templateUrl: 'js/app/libros/librodetalle/librodetalle.html',
- controller: 'librodetallecontroller',
- resolve: {
- libro: function (libroservicio ,$stateProvider) {
- return libroservicio.obtenerlibro($stateProvider.id);
- }
- }
- }
- }*/
+
+      .state('app.countries6', {
+        url: '/countries6',
+        views: {
+          'content': {
+            templateUrl: 'js/app/practica/6/countries6.html',
+            controller: 'Countries6Controller'
+          }
+        }
+      })
+
+      .state('app.countries7', {
+        url: '/countries7',
+        views: {
+          'content': {
+            templateUrl: 'js/app/practica/7/countries7.html',
+            controller: 'Countries7Controller'
+          }
+        }
+      })
+
+
+  });

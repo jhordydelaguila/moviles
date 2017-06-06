@@ -1,0 +1,29 @@
+<ion-view view-title="COUNTRIES 6">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">Seleccionar codigo</div>
+        <select ng-model="code">
+          <option>Escoge</option>
+          <option value="AFG">AFG</option>
+          <option value="AGO">AGO</option>
+          <option value="ATA">ATA</option>
+          <option value="BRN">BRN</option>
+        </select>
+      </label>
+
+      <button class="button button-assertive button-block" ng-click="buscarPais(code)">Buscar</button>
+
+      <div class="card">
+        <ion-item>
+          <div class="infoLeft">
+            <h2>{{paisencontrado.name}}</h2>
+            <p>{{paisencontrado.alpha2_code}} </p>
+            <p>{{paisencontrado.alpha3_code}} </p>
+          </div>
+        </ion-item>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

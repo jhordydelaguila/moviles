@@ -1,0 +1,21 @@
+<ion-view view-title="CONUNTRIES 7">
+  <ion-content>
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="ingrese 2 o 3 caracteres" ng-model="code">
+        </label>
+      </div>
+
+      <button class="button button-block button-assertive" ng-click="buscarPais(code)">Buscar</button>
+
+      <ion-item class="item-thumbnail-left" ng-repeat="pais in paises">
+        <div class="info">
+          <h3>{{pais.name}}</h3>
+          <p>{{pais.alpha2_code}} </p>
+          <p>{{pais.alpha3_code}} </p>
+        </div>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-view>
